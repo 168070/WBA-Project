@@ -1,0 +1,25 @@
+E:\C#_programing\MarasMVC\MarasMVC\bin\MarasMVC.dll
+E:\C#_programing\MarasMVC\MarasMVC\bin\MarasMVC.pdb
+E:\C#_programing\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+E:\C#_programing\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
+E:\C#_programing\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarasMVC_0.2\MarasMVC\MarasMVC\bin\MarasMVC.dll
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarasMVC_0.2\MarasMVC\MarasMVC\bin\MarasMVC.pdb
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarasMVC_0.2\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarasMVC_0.2\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarasMVC_0.2\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb
+E:\MarasMVC\MarasMVC\bin\MarasMVC.dll
+E:\MarasMVC\MarasMVC\bin\MarasMVC.pdb
+E:\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+E:\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
+E:\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb
+C:\Documents and Settings\Administrator\Moje dokumenty\Visual Studio 2008\Projects\MarasMVC_1.7_RTM\MarasMVC\bin\MarasMVC.dll
+C:\Documents and Settings\Administrator\Moje dokumenty\Visual Studio 2008\Projects\MarasMVC_1.7_RTM\MarasMVC\bin\MarasMVC.pdb
+C:\Documents and Settings\Administrator\Moje dokumenty\Visual Studio 2008\Projects\MarasMVC_1.7_RTM\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Moje dokumenty\Visual Studio 2008\Projects\MarasMVC_1.7_RTM\MarasMVC\obj\Debug\MarasMVC.dll
+C:\Documents and Settings\Administrator\Moje dokumenty\Visual Studio 2008\Projects\MarasMVC_1.7_RTM\MarasMVC\obj\Debug\MarasMVC.pdb
+C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\bin\MarasMVC.dll
+C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\bin\MarasMVC.pdb
+C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
+C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb

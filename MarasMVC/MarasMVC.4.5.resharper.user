@@ -1,0 +1,364 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Orderdet.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:orders.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:online.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Account/f:LogOn.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:help.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:contact.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Shared/f:Site.Master" caret="1722" fromTop="9" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Shared/f:LogOnUserControl.ascx" caret="539" fromTop="23" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Details.aspx" caret="1459" fromTop="18" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Detailsu.aspx" caret="1218" fromTop="40" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Shared/f:Site2.Master" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Products.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Delete.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:customers.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Sales/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:promo.aspx" caret="0" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:Orders.aspx" caret="1779" fromTop="21" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:Details.aspx" caret="1354" fromTop="21" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AccountController.cs" caret="3044" fromTop="17" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Detailsu.aspx" caret="361" fromTop="8" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:users.aspx" caret="371" fromTop="5" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:sales.aspx" caret="1010" fromTop="10" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Detailss.aspx" caret="1193" fromTop="13" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Edits.aspx" caret="2325" fromTop="23" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:SalesController.cs" caret="3385" fromTop="17" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Shared/f:SiteA.Master" caret="1301" fromTop="14" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="1953" fromTop="0" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:HomeController.cs" caret="12402" fromTop="19" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:HomeController.cs" caret="15944" fromTop="20" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Home/f:Details.aspx" caret="1354" fromTop="21" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:HomeController.cs" caret="16471" fromTop="21" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:SalesController.cs" caret="6597" fromTop="10" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:SalesController.cs" caret="5207" fromTop="15" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="2898" fromTop="18" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:users.aspx" caret="1205" fromTop="4" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Detailsu.aspx" caret="1482" fromTop="23" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Detailsu.aspx" caret="361" fromTop="8" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:users.aspx" caret="371" fromTop="5" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="752" fromTop="25" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:sales.aspx" caret="364" fromTop="5" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:sales.aspx" caret="1855" fromTop="22" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:sales.aspx" caret="1010" fromTop="10" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="742" fromTop="26" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="3426" fromTop="26" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="3413" fromTop="25" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Detailss.aspx" caret="1184" fromTop="13" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="2607" fromTop="21" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="2160" fromTop="23" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="2475" fromTop="26" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="1750" fromTop="15" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="1653" fromTop="11" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="1523" fromTop="7" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Edits.aspx" caret="358" fromTop="8" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Edits.aspx" caret="830" fromTop="17" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Edits.aspx" caret="579" fromTop="13" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Views/d:Admin/f:Edits.aspx" caret="2324" fromTop="23" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:SalesController.cs" caret="3385" fromTop="29" />
+      <File id="98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92/d:Controllers/f:AdminController.cs" caret="1953" fromTop="19" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="0" />
+      <Item value="new" priority="8" />
+      <Item value="sklepEntities" priority="1" />
+      <Item value="_db" priority="26" />
+      <Item value="public" priority="13" />
+      <Item value="ActionResult" priority="13" />
+      <Item value="return" priority="19" />
+      <Item value="View" priority="15" />
+      <Item value="var" priority="11" />
+      <Item value="from" priority="16" />
+      <Item value="where" priority="18" />
+      <Item value="m" priority="2" />
+      <Item value="int" priority="15" />
+      <Item value="nr_klienta" priority="3" />
+      <Item value="select" priority="17" />
+      <Item value="products_ids" priority="3" />
+      <Item value="n" priority="0" />
+      <Item value="MultiSelectList" priority="0" />
+      <Item value="cart_product" priority="0" />
+      <Item value="nrpod" priority="0" />
+      <Item value="List" priority="10" />
+      <Item value="Produkt" priority="13" />
+      <Item value="cart_products" priority="2" />
+      <Item value="foreach" priority="4" />
+      <Item value="list" priority="0" />
+      <Item value="this" priority="3" />
+      <Item value="klient_name" priority="1" />
+      <Item value="c" priority="0" />
+      <Item value="Klient" priority="0" />
+      <Item value="db" priority="6" />
+      <Item value="Klinet" priority="2" />
+      <Item value="kl" priority="7" />
+      <Item value="email" priority="1" />
+      <Item value="userName" priority="5" />
+      <Item value="nazwisko" priority="2" />
+      <Item value="string" priority="16" />
+      <Item value="UserPersonalizationStateInfo" priority="0" />
+      <Item value="UserControl" priority="1" />
+      <Item value="ViewData" priority="13" />
+      <Item value="what" priority="1" />
+      <Item value="p" priority="10" />
+      <Item value="ToString" priority="0" />
+      <Item value="cat" priority="2" />
+      <Item value="User" priority="9" />
+      <Item value="bool" priority="3" />
+      <Item value="if" priority="10" />
+      <Item value="productToEdit" priority="1" />
+      <Item value="orginalProduct" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="GuiHelper" priority="0" />
+      <Item value="String" priority="2" />
+      <Item value="ret" priority="5" />
+      <Item value="Html" priority="3" />
+      <Item value="ControlCollection" priority="0" />
+      <Item value="Page" priority="0" />
+      <Item value="imie" priority="1" />
+      <Item value="nip" priority="3" />
+      <Item value="tel" priority="0" />
+      <Item value="password" priority="0" />
+      <Item value="confirmPassword" priority="0" />
+      <Item value="product_id" priority="0" />
+      <Item value="cook" priority="4" />
+      <Item value="oldvalue" priority="1" />
+      <Item value="RedirectToAction" priority="2" />
+      <Item value="char" priority="0" />
+      <Item value="word" priority="1" />
+      <Item value="Int32" priority="1" />
+      <Item value="CheckOut" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="id" priority="1" />
+      <Item value="s" priority="1" />
+      <Item value="delme" priority="0" />
+      <Item value="deleted" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="else" priority="3" />
+      <Item value="con" priority="2" />
+      <Item value="Adres" priority="1" />
+      <Item value="ad" priority="4" />
+      <Item value="citycode" priority="0" />
+      <Item value="city" priority="0" />
+      <Item value="streetNo" priority="0" />
+      <Item value="street" priority="0" />
+      <Item value="nrk" priority="0" />
+      <Item value="Sprzedawca" priority="2" />
+      <Item value="sp" priority="4" />
+      <Item value="stanowisko" priority="0" />
+      <Item value="MembershipCreateStatus" priority="0" />
+      <Item value="MembershipService" priority="0" />
+      <Item value="controler" priority="1" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="ct" priority="0" />
+      <Item value="RejestrZamowien" priority="7" />
+      <Item value="zam" priority="8" />
+      <Item value="money" priority="1" />
+      <Item value="SelectList" priority="3" />
+      <Item value="prod" priority="7" />
+      <Item value="decimal" priority="3" />
+      <Item value="z" priority="0" />
+      <Item value="Models" priority="0" />
+      <Item value="Pozycja_Zamowienia" priority="1" />
+      <Item value="pz" priority="1" />
+      <Item value="nr_zam" priority="0" />
+      <Item value="descending" priority="1" />
+      <Item value="data" priority="1" />
+      <Item value="rj" priority="3" />
+      <Item value="nrprod" priority="1" />
+      <Item value="ascending" priority="1" />
+      <Item value="orderby" priority="0" />
+      <Item value="zamowienia" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="DateTime" priority="0" />
+      <Item value="id_zam" priority="0" />
+      <Item value="zamToEdit" priority="5" />
+      <Item value="spname" priority="0" />
+      <Item value="nrPrac" priority="0" />
+      <Item value="orginalZam" priority="1" />
+      <Item value="FormCollection" priority="0" />
+      <Item value="klient" priority="3" />
+      <Item value="k" priority="2" />
+      <Item value="ile" priority="1" />
+      <Item value="pr" priority="1" />
+      <Item value="prtoedit" priority="1" />
+      <Item value="Response" priority="0" />
+      <Item value="objCookie" priority="0" />
+      <Item value="spToEdit" priority="1" />
+      <Item value="orgSp" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.sklepEntities">
+      <Item value="Produkt" priority="13" />
+      <Item value="RejestrZamowien" priority="10" />
+      <Item value="Klinet" priority="9" />
+      <Item value="AddToKlinet" priority="0" />
+      <Item value="SavingChanges" priority="0" />
+      <Item value="SaveChanges" priority="3" />
+      <Item value="AddToProdukt" priority="0" />
+      <Item value="AddToAdres" priority="0" />
+      <Item value="AddToSprzedawca" priority="0" />
+      <Item value="AddToRejestrZamowien" priority="0" />
+      <Item value="AddToPozycja_Zamowienia" priority="0" />
+      <Item value="Pozycja_Zamowienia" priority="0" />
+      <Item value="Sprzedawca" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectQuery`1">
+      <Item value="ToList" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.RejestrZamowien">
+      <Item value="NrKlienta" priority="8" />
+      <Item value="NrProduktu" priority="0" />
+      <Item value="RodzajTranzakcji" priority="1" />
+      <Item value="WartoscZamowienia" priority="4" />
+      <Item value="NrZamowienia" priority="12" />
+      <Item value="NrPracownika" priority="3" />
+      <Item value="Data" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList" priority="8" />
+      <Item value="First" priority="11" />
+      <Item value="Distinct" priority="0" />
+      <Item value="Last" priority="2" />
+      <Item value="OrderByDescending" priority="0" />
+      <Item value="Take" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.Produkt">
+      <Item value="NrProduktu" priority="13" />
+      <Item value="TypProduktu" priority="3" />
+      <Item value="CenaJednostkowa" priority="0" />
+      <Item value="Ilosc" priority="3" />
+      <Item value="NazwaProduktu" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="First" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="2" />
+      <Item value="Contains" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Controllers.HomeController">
+      <Item value="User" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.IPrincipal">
+      <Item value="Identity" priority="9" />
+      <Item value="IsInRole" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.IIdentity">
+      <Item value="Name" priority="5" />
+      <Item value="IsAuthenticated" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.Klinet">
+      <Item value="OpisKlienta" priority="0" />
+      <Item value="NrKlienta" priority="5" />
+      <Item value="Login" priority="1" />
+      <Item value="Imie" priority="2" />
+      <Item value="Nazwisko" priority="1" />
+      <Item value="E_Mail" priority="0" />
+      <Item value="NIP" priority="3" />
+      <Item value="Telefon" priority="0" />
+      <Item value="Rola_w_systemie" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper">
+      <Item value="RenderPartial" priority="0" />
+      <Item value="Encode" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="2" />
+      <Item value="Equals" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="Encode" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MarasMVC.Helpers.GuiHelper">
+      <Item value="Label" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="IsAuthenticated" priority="0" />
+      <Item value="LogonUserIdentity" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.WindowsIdentity">
+      <Item value="User" priority="0" />
+      <Item value="AuthenticationType" priority="0" />
+      <Item value="Groups" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="User" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Controllers.AccountController">
+      <Item value="Register" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpCookieCollection">
+      <Item value="Get" priority="0" />
+      <Item value="Remove" priority="0" />
+      <Item value="Set" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpCookie">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.Adres">
+      <Item value="Miasto" priority="0" />
+      <Item value="NrDomu" priority="1" />
+      <Item value="Ulica" priority="0" />
+      <Item value="NrKlienta" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.Sprzedawca">
+      <Item value="Imie" priority="0" />
+      <Item value="Nazwisko" priority="0" />
+      <Item value="Stanowisko" priority="0" />
+      <Item value="NIP" priority="0" />
+      <Item value="Login" priority="1" />
+      <Item value="Rola_w_systemie" priority="0" />
+      <Item value="NrPracownika" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Roles">
+      <Item value="AddUserToRole" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarasMVC.Models.Pozycja_Zamowienia">
+      <Item value="NrZamowienia" priority="1" />
+      <Item value="NrProduktu" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponseBase">
+      <Item value="Cookies" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

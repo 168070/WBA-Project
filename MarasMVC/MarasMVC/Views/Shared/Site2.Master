@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <script src="../../Scripts/jquery-1.2.6.js"></script>
+    <link href="../../Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <div id="page">
+        <div id="pageHeader">
+            <ul class="menu">
+                <li><% Html.RenderPartial("LogOnUserControl"); %></li>
+                <li><a href="#">Pomoc</a></li>
+                
+            </ul>
+            <div class="logo">
+            
+            </div>
+            <div class="searchbox">
+                Szukaj : <input type="text" class="searchbox_textbox" /><input type="button" class="searchbox_btn" />
+            </div>
+        </div>
+        <div id="navigation">
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="/sales/products">Produkty</a></li>
+                <li><a href="">Promocje</a></li>
+                <li><a href="/sales/orders">Zamówienia klientów</a></li>
+                <li><a href="/sales/customers">Klienci</a></li>
+            </ul>
+        </div>
+        <div id="pageContent">
+            <div class="b">
+                <div class="left">
+                    <div class="submenu">
+                        <h2>Sprzęt Komputerowy</h2>
+                        <ul class="f12">
+                            <li><a href="">Laptopy</a></li>
+                            <li><a href="">Akcesoria do laptopów</a></li>
+                            <li><a href="">Desktopy</a></li>
+                            <li><a href="">Apple</a></li>
+                            <li><a href="">Monitory</a></li>
+                            <li><a href="">Drukarki</a></li>
+                            <li><a href="">Dyski twarde</a></li>
+                            <li><a href="">Akcesoria sieciowe</a></li>
+                            <li><a href="">Oprogramowanie</a></li>
+                            <li><a href="">Głośniki</a></li>
+                            <li><a href="">Mikrofony</a></li>
+                            <li><a href="/home/category/Mysz">Myszki & Klawiatury</a></li>
+                            <li><a href="">Kamery internetowe</a></li>
+                            <li><a href="">Akcesoria komputerowe</a></li>
+                            <li><a href="">UPS</a></li>
+                            <li><a href="">Projektory</a></li>
+                            <li><a href="">Skanery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div  id="main" class="right">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+        </div><div class="pageContentFooter"></div>
+
+            <div class="f"></div>
+        </div>
+        <div id="pageFooter">
+            © 2009 Marek Jagiełka. All Rights Reserved. 
+        </div>
+    </div>
+</body>
+</html>

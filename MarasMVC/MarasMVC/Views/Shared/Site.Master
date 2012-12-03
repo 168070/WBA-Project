@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <script src="../../Scripts/jquery-1.2.6.js"></script>
+    <link href="../../Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <div id="page">
+        <div id="pageHeader">
+            <ul class="menu">
+                <li><% Html.RenderPartial("LogOnUserControl"); %></li>
+                <li><a href="#">Pomoc</a></li>
+                
+            </ul>
+            <div class="logo">
+            
+            </div>
+            <div class="searchbox">
+                Szukaj : <input type="text" class="searchbox_textbox" /><input type="button" class="searchbox_btn" />
+            </div>
+        </div>
+        <div id="navigation">
+            <ul class="menu">
+                <li><a href="/home/index">Home</a></li>
+                <li><a href="/home/products">Produkty</a></li>
+                <li><a href="/home/promo">Promocje</a></li>
+                <li><a href="/home/CheckOut">Mój koszyk</a></li>
+                <li><a href="/home/orders">Zamówienia</a></li>
+                <li><a href="/home/about">O nas</a></li>
+            </ul>
+        </div>
+        <div id="pageContent">
+            <div class="b">
+                <div class="left">
+                    <div class="submenu">
+                        <h2>Sprzęt Komputerowy</h2>
+                        <ul class="f12">
+                            <li><a href="/home/ProductsCat/Laptop">Laptopy</a></li>
+                            <li><a href="/home/ProductsCat/Drukarki">Drukarki</a></li>
+                            <li><a href="/home/ProductsCat/Hdd">Dyski twarde</a></li>
+                            <li><a href="/home/ProductsCat/Sieć">Akcesoria sieciowe</a></li>
+                            <li><a href="/home/ProductsCat/Soft">Oprogramowanie</a></li>
+                            <li><a href="/home/ProductsCat/Mysz">Myszki</a></li>
+                            <li><a href="/home/ProductsCat/Klawiatura">Klawiatury</a></li>
+                            <li><a href="/home/ProductsCat/Monitor">Monitory</a></li>
+                            <li><a href="/home/ProductsCat/Telewizor">Telewizory</a></li>
+                            <li><a href="/home/ProductsCat/Akcesorium">Akcesoria komputerowe</a></li>
+                            <li><a href="/home/ProductsCat/Projektor">Projektory</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div  id="main" class="right">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+        </div><div class="pageContentFooter"></div>
+        <div class="block margin_t_10">
+            <div class="h"></div>
+            <div class="b">
+                <div class="newsletter margin_l_10">
+                    <div class="cGray bold">Zapisz się do newslettera</div>
+                    <p class="f11">
+                        Co tygodniowe informacje o nowych produktach, oraz promocjach.
+                        <input type="text" class="newsletter_text" /><input type="button" value="Zapisz się" class="newsletter_btn"  />
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="fLeft w180 margin_l_10">
+                    <div class="cGray bold"> Kategorie produktów</div>
+                    <ul class="list">
+                        <li><a href="/home/category">Komputery</a></li>
+                        <li><a href="">Elekrtonika</a></li>
+                        <li><a href="">Akcesoria</a></li>
+                        <li><a href="">Inne</a></li>
+                    </ul>
+                </div>
+                <div class="fLeft w180">
+                    <div class="cGray bold"> Obsługa klienta</div>
+                    <ul class="list">
+                        <li><a href="/home/help">Pomoc</a></li>
+                        <li><a href="/home/contact">Skontaktuj sie </a></li>
+                        <li><a href="/home/about">O nas</a></li>
+                        <li><a href="/home/online">Pomoc online</a></li>
+                    </ul>
+                </div>
+                <div class="fLeft w180">
+                    <div class="cGray bold"> Regulamin</div>
+                    <ul class="list">
+                        <li><a href="/home/conditions">Warunki zakupu</a></li>
+                        <li><a href="/home/rules">Zasady</a></li>
+                    </ul>
+                </div>
+                <div class="fLeft w180">
+                    <div class="cGray bold"> Twoje zamówienie</div>
+                    <ul class="list">
+                        <li><a href="/home/orders">Status zamówienia</a></li>
+                        <li><a href="/home/shipment">Wysyłka & Dostawa</a></li>
+                        <li><a href="/home/personally">Odbiór osobisty</a></li>
+                        <li><a href="/home/discount">Znajdz Rabat</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="f"></div>
+        </div>
+        <div id="pageFooter">
+            © 2009 Marek Jagiełka. All Rights Reserved. 
+        </div>
+    </div>
+</body>
+</html>
