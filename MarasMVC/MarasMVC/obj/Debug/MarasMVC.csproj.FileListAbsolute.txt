@@ -23,3 +23,8 @@ C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\Mar
 C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
 C:\Documents and Settings\PWr\Pulpit\WBA_Project\SKLEP_Prototyp_prj\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb
+C:\Documents and Settings\PWr\Pulpit\WBA-Git\MarasMVC\MarasMVC\bin\MarasMVC.dll
+C:\Documents and Settings\PWr\Pulpit\WBA-Git\MarasMVC\MarasMVC\bin\MarasMVC.pdb
+C:\Documents and Settings\PWr\Pulpit\WBA-Git\MarasMVC\MarasMVC\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\PWr\Pulpit\WBA-Git\MarasMVC\MarasMVC\obj\Debug\MarasMVC.dll
+C:\Documents and Settings\PWr\Pulpit\WBA-Git\MarasMVC\MarasMVC\obj\Debug\MarasMVC.pdb

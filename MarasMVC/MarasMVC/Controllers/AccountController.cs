@@ -147,7 +147,7 @@ namespace MarasMVC.Controllers
         {
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
 
-            if (ValidateRegistration(userName, email, password, confirmPassword))
+            if (ValidateRegistration(userName, email, password, confirmPassword, imie, nazwisko, nip, "Randomcity", "00-000", "Randomstreet", "0", "000000"))
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus = MembershipService.CreateUser(userName, password, email);
@@ -192,7 +192,7 @@ namespace MarasMVC.Controllers
 
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
 
-            if (ValidateRegistration(userName, email, password, confirmPassword))
+            if (ValidateRegistration(userName, email, password, confirmPassword, imie, nazwisko, nip, city, citycode, street, streetNo, tel))
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus = MembershipService.CreateUser(userName, password, email);
@@ -202,9 +202,6 @@ namespace MarasMVC.Controllers
                     //ustawienie go jako klienta
                     Roles.AddUserToRole(userName, "Klient");
 
-                    string hash = BitConverter.ToString(SHA1Managed.Create().ComputeHash(Encoding.Default.GetBytes(password))).Replace("-", "");
-                    Debug.WriteLine("Długość wynosi: " + hash.Length);
-
                     //tworzenie nowego klienta
                     Klinet kl = new Klinet();
                     kl.Imie = imie;
@@ -213,7 +210,6 @@ namespace MarasMVC.Controllers
                     kl.NIP = nip;
                     kl.Telefon = tel;
                     kl.Login = userName;
-                    kl.Haslo = hash;
                     kl.Rola_w_systemie = "kl";
                     db.AddToKlinet(kl);
                     db.SaveChanges();
@@ -362,7 +358,7 @@ namespace MarasMVC.Controllers
             return ModelState.IsValid;
         }
 
-        private bool ValidateRegistration(string userName, string email, string password, string confirmPassword)
+        private bool ValidateRegistration(string userName, string email, string password, string confirmPassword, string imie, string nazwisko, string nip, string city, string citycode, string street, string streetNo, string tel)
         {
             if (String.IsNullOrEmpty(userName))
             {
@@ -387,6 +383,47 @@ namespace MarasMVC.Controllers
             if (!Regex.IsMatch(email, "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"))
             {
                 ModelState.AddModelError("email", "Podany adres nie jest prawidłowym adresem e-mail");
+            }
+
+            //Nowe walidacje
+            if (!Regex.IsMatch(nip, "^[0-9]{10}$"))
+            {
+                ModelState.AddModelError("nip", "NIP musi składać się z 10 cyfr");
+            }
+
+            if (!Regex.IsMatch(city, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            {
+                ModelState.AddModelError("city", "Nazwa miasta jest nieprawidłowa");
+            }
+
+            if (!Regex.IsMatch(citycode, "^[0-9]{2}-[0-9]{3}$"))
+            {
+                ModelState.AddModelError("citycode", "Kod pocztowy jest nieprawidłowy");
+            }
+
+            if (!Regex.IsMatch(street, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            {
+                ModelState.AddModelError("street", "Nazwa ulicy jest nieprawidłowa");
+            }
+
+            if (!Regex.IsMatch(streetNo, "^[0-9]{1}[0-9A-Za-z -]{0,20}$"))
+            {
+                ModelState.AddModelError("streetNo", "Numer ulicy jest nieprawidłowy");
+            }
+
+            if (!Regex.IsMatch(tel, "^[0-9 ()-]{6,20}$"))
+            {
+                ModelState.AddModelError("tel", "Numer telefonu nie jest prawidłowy");
+            }
+
+            if (!Regex.IsMatch(imie, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            {
+                ModelState.AddModelError("imie", "Podanie imię nie jest prawidłowe");
+            }
+
+            if (!Regex.IsMatch(nazwisko, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            {
+                ModelState.AddModelError("nazwisko", "Podanie nazwisko nie jest prawidłowe");
             }
 
             if (password == null || password.Length < MembershipService.MinPasswordLength)
