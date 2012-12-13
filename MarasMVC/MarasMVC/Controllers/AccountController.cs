@@ -391,7 +391,7 @@ namespace MarasMVC.Controllers
                 ModelState.AddModelError("nip", "NIP musi składać się z 10 cyfr");
             }
 
-            if (!Regex.IsMatch(city, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            if (!Regex.IsMatch(city, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
             {
                 ModelState.AddModelError("city", "Nazwa miasta jest nieprawidłowa");
             }
@@ -401,12 +401,12 @@ namespace MarasMVC.Controllers
                 ModelState.AddModelError("citycode", "Kod pocztowy jest nieprawidłowy");
             }
 
-            if (!Regex.IsMatch(street, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            if (!Regex.IsMatch(street, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
             {
                 ModelState.AddModelError("street", "Nazwa ulicy jest nieprawidłowa");
             }
 
-            if (!Regex.IsMatch(streetNo, "^[0-9]{1}[0-9A-Za-z -]{0,20}$"))
+            if (!Regex.IsMatch(streetNo, "^[0-9]{1}[0-9A-Za-z -]{0,19}$"))
             {
                 ModelState.AddModelError("streetNo", "Numer ulicy jest nieprawidłowy");
             }
@@ -416,12 +416,12 @@ namespace MarasMVC.Controllers
                 ModelState.AddModelError("tel", "Numer telefonu nie jest prawidłowy");
             }
 
-            if (!Regex.IsMatch(imie, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            if (!Regex.IsMatch(imie, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
             {
                 ModelState.AddModelError("imie", "Podanie imię nie jest prawidłowe");
             }
 
-            if (!Regex.IsMatch(nazwisko, "^[A-Z]{1}[A-Za-z -]{0,20}$"))
+            if (!Regex.IsMatch(nazwisko, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
             {
                 ModelState.AddModelError("nazwisko", "Podanie nazwisko nie jest prawidłowe");
             }
