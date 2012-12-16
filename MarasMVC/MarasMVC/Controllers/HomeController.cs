@@ -68,6 +68,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Index()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             ViewData["Message"] = "Welcome to ASP.NET MVC!";
 
             return View();
@@ -76,6 +77,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Products()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             //bool sale = User.Identity.IsAuthenticated;
             bool sale = User.IsInRole("Sprzedawca");
             if (sale)
@@ -119,7 +121,7 @@ namespace MarasMVC.Controllers
 
             //*************************
             //ciasteczka
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             var cook = HttpContext.Request.Cookies.Get(User.Identity.Name + "myCookieCart");
             
 
@@ -141,6 +143,7 @@ namespace MarasMVC.Controllers
         //listowanie kategori
         public ActionResult Category()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             List<string> cat =  (from p in _db.Produkt
                                  select p.TypProduktu).Distinct().ToList();
 
@@ -189,6 +192,7 @@ namespace MarasMVC.Controllers
         [Authorize(Roles = "Sprzedawca")]
         public ActionResult Edit(int id)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             var productToEdit = (from m in _db.Produkt
 
                                where m.NrProduktu == id
@@ -207,7 +211,7 @@ namespace MarasMVC.Controllers
         //[Authorize(Roles = "Administrator")]
         public ActionResult Edit(Produkt productToEdit)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             try
             {
 
@@ -239,7 +243,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Create()
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
 
         }
@@ -252,7 +256,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Create([Bind(Exclude = "NrProduktu")] Produkt productToCreate)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             try
             {
 
@@ -282,7 +286,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Delete(int id)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             var productToDel = (from m in _db.Produkt
                               where m.NrProduktu == id
                               select m).First();
@@ -294,7 +298,7 @@ namespace MarasMVC.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Delete(Produkt productToDel)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             try
             {
                 var orginalProduct = (from m in _db.Produkt
@@ -319,6 +323,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Details(int id)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             var productToView = (from m in _db.Produkt
                                 where m.NrProduktu == id
                                 select m).First();
@@ -333,7 +338,7 @@ namespace MarasMVC.Controllers
         [Authorize]
         public ActionResult Buy(int id)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             //sprawdzenie stanu magazynowego
             Produkt pr = (from p in _db.Produkt
                        where p.NrProduktu == id
@@ -401,7 +406,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult UnBuy(int id)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             string delme = id.ToString();
             string oldvalue = "";
             string newvalue = "";
@@ -463,6 +468,7 @@ namespace MarasMVC.Controllers
         [Authorize]
         public ActionResult CheckOut()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
 //            User.Identity.Name
             //zabezpieczyć przed nullami
             char cut = '.';
@@ -493,6 +499,7 @@ namespace MarasMVC.Controllers
         /* wpisanie zamówienia do bd */
         public ActionResult CheckOut2(IEnumerable<Produkt> ct)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             int x = ct.Count();
             //ct zawsze  puste
             // docelowo z ct pobieranie listy produktów
@@ -612,6 +619,7 @@ namespace MarasMVC.Controllers
         [Authorize]
         public ActionResult Orders()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             string klient_name = this.User.Identity.Name;
 
             
@@ -676,7 +684,7 @@ namespace MarasMVC.Controllers
         
         public ActionResult Orderdet(int id)
         {
-            
+            Response.AppendHeader("X-XSS-Protection", "0");
             RejestrZamowien rj = (from data in _db.RejestrZamowien 
                                   where data.NrZamowienia == id
                                   select data
@@ -710,11 +718,13 @@ namespace MarasMVC.Controllers
 
         public ActionResult About()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         public ActionResult Conditions()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -722,24 +732,28 @@ namespace MarasMVC.Controllers
 
         public ActionResult Rules()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         
         public ActionResult Status()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         
         public ActionResult Shipment()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         
         public ActionResult Personally()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -748,6 +762,7 @@ namespace MarasMVC.Controllers
         
         public ActionResult Discount()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -755,23 +770,27 @@ namespace MarasMVC.Controllers
 
         public ActionResult help()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
 
         public ActionResult contact()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         public ActionResult online()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         
         public ActionResult promo()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             List<Produkt> prod = (from p in _db.Produkt
                                   select p).Take(4).ToList();
 

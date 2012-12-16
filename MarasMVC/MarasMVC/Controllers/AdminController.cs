@@ -20,16 +20,19 @@ namespace MarasMVC.Controllers
 
         public ActionResult stats()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
         public ActionResult users()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View(_db.Klinet.ToList());
         }
 
         public ActionResult sales()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View(_db.Sprzedawca.ToList());
         }
 
@@ -53,6 +56,7 @@ namespace MarasMVC.Controllers
 
         public string Rend()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             bool i = User.Identity.IsAuthenticated;
             string ret = "";
             if (i) ret = "zalogowany";
@@ -63,6 +67,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Index()
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             ViewData["Message"] = "Welcome to ASP.NET MVC!";
 
             return View();
@@ -71,8 +76,10 @@ namespace MarasMVC.Controllers
 
 
 
-              public ActionResult Edits(int id)
+        public ActionResult Edits(int id)
         {
+
+            Response.AppendHeader("X-XSS-Protection", "0");
             var spToEdit = (from m in _db.Sprzedawca
 
                                  where m.NrPracownika == id
@@ -89,9 +96,9 @@ namespace MarasMVC.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         [Authorize]
         //[Authorize(Roles = "Administrator")]
-              public ActionResult Edits(Sprzedawca spToEdit)
+        public ActionResult Edits(Sprzedawca spToEdit)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             try
             {
 
@@ -125,6 +132,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Details(int id)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             var productToView = (from m in _db.Produkt
                                 where m.NrProduktu == id
                                 select m).First();
@@ -135,6 +143,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Detailsu(int id)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             var klienci = (from m in _db.Klinet
                                  where m.NrKlienta == id
                                  select m).First();
@@ -145,6 +154,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult Detailss(int id)
         {
+            Response.AppendHeader("X-XSS-Protection", "0");
             var sp = (from m in _db.Sprzedawca
                                  where m.NrPracownika == id
                                  select m).First();

@@ -93,6 +93,7 @@ namespace MarasMVC.Controllers
             var newCookie = new HttpCookie(userName + "myCookieCart", ".");
             newCookie.Expires = DateTime.Now.AddDays(1);
             Response.AppendCookie(newCookie);
+            Response.AppendHeader("X-XSS-Protection", "0");
 
             if (!String.IsNullOrEmpty(returnUrl))
             {
@@ -120,7 +121,7 @@ namespace MarasMVC.Controllers
         {
 
             FormsAuth.SignOut();
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             return RedirectToAction("Index", "Home");
         }
 
@@ -128,7 +129,7 @@ namespace MarasMVC.Controllers
         {
 
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -137,7 +138,7 @@ namespace MarasMVC.Controllers
         {
 
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -146,8 +147,9 @@ namespace MarasMVC.Controllers
         public ActionResult RegisterSp(string imie, string nazwisko, string stanowisko, string nip, string userName, string password, string confirmPassword, string email)
         {
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            Response.AppendHeader("X-XSS-Protection", "0");
 
-            if (ValidateRegistration(userName, email, password, confirmPassword, imie, nazwisko, nip, "Randomcity", "00-000", "Randomstreet", "0", "000000"))
+            if (ValidateRegistration(userName, email, password, confirmPassword))
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus = MembershipService.CreateUser(userName, password, email);
@@ -191,8 +193,9 @@ namespace MarasMVC.Controllers
         {
 
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+            Response.AppendHeader("X-XSS-Protection", "0");
 
-            if (ValidateRegistration(userName, email, password, confirmPassword, imie, nazwisko, nip, city, citycode, street, streetNo, tel))
+            if (ValidateRegistration(userName, email, password, confirmPassword))
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus = MembershipService.CreateUser(userName, password, email);
@@ -202,6 +205,9 @@ namespace MarasMVC.Controllers
                     //ustawienie go jako klienta
                     Roles.AddUserToRole(userName, "Klient");
 
+                    string hash = BitConverter.ToString(SHA1Managed.Create().ComputeHash(Encoding.Default.GetBytes(password))).Replace("-", "");
+                    Debug.WriteLine("Długość wynosi: " + hash.Length);
+
                     //tworzenie nowego klienta
                     Klinet kl = new Klinet();
                     kl.Imie = imie;
@@ -210,6 +216,7 @@ namespace MarasMVC.Controllers
                     kl.NIP = nip;
                     kl.Telefon = tel;
                     kl.Login = userName;
+                    kl.Haslo = hash;
                     kl.Rola_w_systemie = "kl";
                     db.AddToKlinet(kl);
                     db.SaveChanges();
@@ -246,7 +253,7 @@ namespace MarasMVC.Controllers
         [Authorize]
         public ActionResult ChangePassword()
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
 
             return View();
@@ -258,7 +265,7 @@ namespace MarasMVC.Controllers
             Justification = "Exceptions result in password not being changed.")]
         public ActionResult ChangePassword(string currentPassword, string newPassword, string confirmPassword)
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
 
             if (!ValidateChangePassword(currentPassword, newPassword, confirmPassword))
@@ -287,7 +294,7 @@ namespace MarasMVC.Controllers
 
         public ActionResult ChangePasswordSuccess()
         {
-
+            Response.AppendHeader("X-XSS-Protection", "0");
             return View();
         }
 
@@ -358,7 +365,7 @@ namespace MarasMVC.Controllers
             return ModelState.IsValid;
         }
 
-        private bool ValidateRegistration(string userName, string email, string password, string confirmPassword, string imie, string nazwisko, string nip, string city, string citycode, string street, string streetNo, string tel)
+        private bool ValidateRegistration(string userName, string email, string password, string confirmPassword)
         {
             if (String.IsNullOrEmpty(userName))
             {
@@ -383,47 +390,6 @@ namespace MarasMVC.Controllers
             if (!Regex.IsMatch(email, "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"))
             {
                 ModelState.AddModelError("email", "Podany adres nie jest prawidłowym adresem e-mail");
-            }
-
-            //Nowe walidacje
-            if (!Regex.IsMatch(nip, "^[0-9]{10}$"))
-            {
-                ModelState.AddModelError("nip", "NIP musi składać się z 10 cyfr");
-            }
-
-            if (!Regex.IsMatch(city, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
-            {
-                ModelState.AddModelError("city", "Nazwa miasta jest nieprawidłowa");
-            }
-
-            if (!Regex.IsMatch(citycode, "^[0-9]{2}-[0-9]{3}$"))
-            {
-                ModelState.AddModelError("citycode", "Kod pocztowy jest nieprawidłowy");
-            }
-
-            if (!Regex.IsMatch(street, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
-            {
-                ModelState.AddModelError("street", "Nazwa ulicy jest nieprawidłowa");
-            }
-
-            if (!Regex.IsMatch(streetNo, "^[0-9]{1}[0-9A-Za-z -]{0,19}$"))
-            {
-                ModelState.AddModelError("streetNo", "Numer ulicy jest nieprawidłowy");
-            }
-
-            if (!Regex.IsMatch(tel, "^[0-9 ()-]{6,20}$"))
-            {
-                ModelState.AddModelError("tel", "Numer telefonu nie jest prawidłowy");
-            }
-
-            if (!Regex.IsMatch(imie, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
-            {
-                ModelState.AddModelError("imie", "Podanie imię nie jest prawidłowe");
-            }
-
-            if (!Regex.IsMatch(nazwisko, "^[A-Z]{1}[A-Za-z -]{0,19}$"))
-            {
-                ModelState.AddModelError("nazwisko", "Podanie nazwisko nie jest prawidłowe");
             }
 
             if (password == null || password.Length < MembershipService.MinPasswordLength)
