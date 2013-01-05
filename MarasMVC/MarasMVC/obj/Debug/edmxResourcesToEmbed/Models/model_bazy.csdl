@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sklepModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="sklepEntities">
+    <EntitySet Name="Adres" EntityType="sklepModel.Adres" />
+    <EntitySet Name="Klinet" EntityType="sklepModel.Klinet" />
+    <EntitySet Name="Pozycja_Zamowienia" EntityType="sklepModel.Pozycja_Zamowienia" />
+    <EntitySet Name="PozycjaNaFakturze" EntityType="sklepModel.PozycjaNaFakturze" />
+    <EntitySet Name="Produkt" EntityType="sklepModel.Produkt" />
+    <EntitySet Name="Rejestr_Faktur" EntityType="sklepModel.Rejestr_Faktur" />
+    <EntitySet Name="RejestrZamowien" EntityType="sklepModel.RejestrZamowien" />
+    <EntitySet Name="Sprzedawca" EntityType="sklepModel.Sprzedawca" />
+    <EntitySet Name="Status_Zamowienia" EntityType="sklepModel.Status_Zamowienia" />
+    <EntitySet Name="sysdiagrams" EntityType="sklepModel.sysdiagrams" />
+  </EntityContainer>
+  <EntityType Name="Adres">
+    <Key>
+      <PropertyRef Name="Kod" />
+    </Key>
+    <Property Name="Kod" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="NrKlienta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Miasto" Type="String" MaxLength="80" Unicode="false" FixedLength="true" />
+    <Property Name="Ulica" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="true" />
+    <Property Name="NrDomu" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Klinet">
+    <Key>
+      <PropertyRef Name="NrKlienta" />
+    </Key>
+    <Property Name="NrKlienta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Imie" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="E_Mail" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="NIP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Telefon" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="OpisKlienta" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Haslo" Type="String" Nullable="true" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Rola_w_systemie" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Pozycja_Zamowienia">
+    <Key>
+      <PropertyRef Name="NrPozycjiZl" />
+    </Key>
+    <Property Name="NrPozycjiZl" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrZamowienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrProduktu" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NazwaZl" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="TypZl" Type="Int32" />
+    <Property Name="IloscZl" Type="Int32" Nullable="true" />
+    <Property Name="Uwagi" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PozycjaNaFakturze">
+    <Key>
+      <PropertyRef Name="NrPozycji" />
+    </Key>
+    <Property Name="NrPozycji" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrFaktury" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrProduktu" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="IloscFaktura" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Produkt">
+    <Key>
+      <PropertyRef Name="NrProduktu" />
+    </Key>
+    <Property Name="NrProduktu" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NazwaProduktu" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="true" />
+    <Property Name="TypProduktu" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Ilosc" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="true" />
+    <Property Name="CenaJednostkowa" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Jednostka" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="OpisProduktu" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="RokProdukcji" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Rejestr_Faktur">
+    <Key>
+      <PropertyRef Name="NrFaktury" />
+    </Key>
+    <Property Name="NrFaktury" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrKlienta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TerminPlatnosci" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RejestrZamowien">
+    <Key>
+      <PropertyRef Name="NrZamowienia" />
+    </Key>
+    <Property Name="NrZamowienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Precision="18" Scale="0" Name="NrPracownika" Type="Decimal" Nullable="true" />
+    <Property Name="NrKlienta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="RodzajTranzakcji" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="WartoscZamowienia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Data" Type="DateTime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Sprzedawca">
+    <Key>
+      <PropertyRef Name="NrPracownika" />
+    </Key>
+    <Property Name="NrPracownika" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Imie" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Stanowisko" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="NIP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Rola_w_systemie" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Status_Zamowienia">
+    <Key>
+      <PropertyRef Name="NrStatusu" />
+    </Key>
+    <Property Name="NrStatusu" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="NrZamowienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Data" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

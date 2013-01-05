@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarasMVC", "MarasMVC\MarasMVC.csproj", "{98BB2BDF-C91B-4A3D-B1F9-F0A16BEFCB92}"
 EndProject
 Global

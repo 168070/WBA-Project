@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sklepModelStoreContainer" CdmEntityContainer="sklepEntities">
+    <EntitySetMapping Name="Adres">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Adres)">
+        <MappingFragment StoreEntitySet="Adres">
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="NrKlienta" ColumnName="NrKlienta" />
+          <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+          <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+          <ScalarProperty Name="NrDomu" ColumnName="NrDomu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klinet">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Klinet)">
+        <MappingFragment StoreEntitySet="Klinet">
+          <ScalarProperty Name="NrKlienta" ColumnName="NrKlienta" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="OpisKlienta" ColumnName="OpisKlienta" />
+          <ScalarProperty Name="Haslo" ColumnName="Haslo" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Rola_w_systemie" ColumnName="Rola w systemie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pozycja_Zamowienia">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Pozycja_Zamowienia)">
+        <MappingFragment StoreEntitySet="Pozycja Zamowienia">
+          <ScalarProperty Name="NrPozycjiZl" ColumnName="NrPozycjiZl" />
+          <ScalarProperty Name="NrZamowienia" ColumnName="NrZamowienia" />
+          <ScalarProperty Name="NrProduktu" ColumnName="NrProduktu" />
+          <ScalarProperty Name="NazwaZl" ColumnName="NazwaZl" />
+          <ScalarProperty Name="TypZl" ColumnName="TypZl" />
+          <ScalarProperty Name="IloscZl" ColumnName="IloscZl" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozycjaNaFakturze">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.PozycjaNaFakturze)">
+        <MappingFragment StoreEntitySet="PozycjaNaFakturze">
+          <ScalarProperty Name="NrPozycji" ColumnName="NrPozycji" />
+          <ScalarProperty Name="NrFaktury" ColumnName="NrFaktury" />
+          <ScalarProperty Name="NrProduktu" ColumnName="NrProduktu" />
+          <ScalarProperty Name="IloscFaktura" ColumnName="IloscFaktura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkt">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Produkt)">
+        <MappingFragment StoreEntitySet="Produkt">
+          <ScalarProperty Name="NrProduktu" ColumnName="NrProduktu" />
+          <ScalarProperty Name="NazwaProduktu" ColumnName="NazwaProduktu" />
+          <ScalarProperty Name="TypProduktu" ColumnName="TypProduktu" />
+          <ScalarProperty Name="Ilosc" ColumnName="Ilosc" />
+          <ScalarProperty Name="CenaJednostkowa" ColumnName="CenaJednostkowa" />
+          <ScalarProperty Name="Jednostka" ColumnName="Jednostka" />
+          <ScalarProperty Name="OpisProduktu" ColumnName="OpisProduktu" />
+          <ScalarProperty Name="RokProdukcji" ColumnName="RokProdukcji" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rejestr_Faktur">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Rejestr_Faktur)">
+        <MappingFragment StoreEntitySet="Rejestr Faktur">
+          <ScalarProperty Name="NrFaktury" ColumnName="NrFaktury" />
+          <ScalarProperty Name="NrKlienta" ColumnName="NrKlienta" />
+          <ScalarProperty Name="TerminPlatnosci" ColumnName="TerminPlatnosci" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejestrZamowien">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.RejestrZamowien)">
+        <MappingFragment StoreEntitySet="RejestrZamowien">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="NrZamowienia" ColumnName="NrZamowienia" />
+          <ScalarProperty Name="NrPracownika" ColumnName="NrPracownika" />
+          <ScalarProperty Name="NrKlienta" ColumnName="NrKlienta" />
+          <ScalarProperty Name="RodzajTranzakcji" ColumnName="RodzajTranzakcji" />
+          <ScalarProperty Name="WartoscZamowienia" ColumnName="WartoscZamowienia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sprzedawca">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Sprzedawca)">
+        <MappingFragment StoreEntitySet="Sprzedawca">
+          <ScalarProperty Name="NrPracownika" ColumnName="NrPracownika" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Rola_w_systemie" ColumnName="Rola w systemie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status_Zamowienia">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.Status_Zamowienia)">
+        <MappingFragment StoreEntitySet="Status Zamowienia">
+          <ScalarProperty Name="NrStatusu" ColumnName="NrStatusu" />
+          <ScalarProperty Name="NrZamowienia" ColumnName="NrZamowienia" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(sklepModel.sysdiagrams)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

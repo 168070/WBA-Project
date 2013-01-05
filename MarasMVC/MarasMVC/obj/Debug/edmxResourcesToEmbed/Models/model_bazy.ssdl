@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sklepModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="sklepModelStoreContainer">
+    <EntitySet Name="Adres" EntityType="sklepModel.Store.Adres" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Klinet" EntityType="sklepModel.Store.Klinet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Pozycja Zamowienia" EntityType="sklepModel.Store.Pozycja Zamowienia" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="PozycjaNaFakturze" EntityType="sklepModel.Store.PozycjaNaFakturze" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Produkt" EntityType="sklepModel.Store.Produkt" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Rejestr Faktur" EntityType="sklepModel.Store.Rejestr Faktur" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="RejestrZamowien" EntityType="sklepModel.Store.RejestrZamowien" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Sprzedawca" EntityType="sklepModel.Store.Sprzedawca" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Status Zamowienia" EntityType="sklepModel.Store.Status Zamowienia" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="sysdiagrams" EntityType="sklepModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="Adres">
+    <Key>
+      <PropertyRef Name="Kod" />
+    </Key>
+    <Property Name="Kod" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="NrKlienta" Type="numeric" Nullable="false" />
+    <Property Name="Miasto" Type="char" MaxLength="80" />
+    <Property Name="Ulica" Type="char" Nullable="false" MaxLength="120" />
+    <Property Name="NrDomu" Type="char" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Klinet">
+    <Key>
+      <PropertyRef Name="NrKlienta" />
+    </Key>
+    <Property Name="NrKlienta" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Imie" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nazwisko" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="E-Mail" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="NIP" Type="char" MaxLength="10" />
+    <Property Name="Telefon" Type="varchar" MaxLength="25" />
+    <Property Name="OpisKlienta" Type="text" />
+    <Property Name="Haslo" Type="char" MaxLength="20" />
+    <Property Name="Login" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Rola w systemie" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Pozycja Zamowienia">
+    <Key>
+      <PropertyRef Name="NrPozycjiZl" />
+    </Key>
+    <Property Name="NrPozycjiZl" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NrZamowienia" Type="numeric" Nullable="false" />
+    <Property Name="NrProduktu" Type="numeric" Nullable="false" />
+    <Property Name="NazwaZl" Type="text" />
+    <Property Name="TypZl" Type="int" />
+    <Property Name="IloscZl" Type="int" />
+    <Property Name="Uwagi" Type="text" />
+  </EntityType>
+  <EntityType Name="PozycjaNaFakturze">
+    <Key>
+      <PropertyRef Name="NrPozycji" />
+    </Key>
+    <Property Name="NrPozycji" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NrFaktury" Type="numeric" Nullable="false" />
+    <Property Name="NrProduktu" Type="numeric" Nullable="false" />
+    <Property Name="IloscFaktura" Type="numeric" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produkt">
+    <Key>
+      <PropertyRef Name="NrProduktu" />
+    </Key>
+    <Property Name="NrProduktu" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NazwaProduktu" Type="char" Nullable="false" MaxLength="200" />
+    <Property Name="TypProduktu" Type="char" MaxLength="50" />
+    <Property Name="Ilosc" Type="char" Nullable="false" MaxLength="200" />
+    <Property Name="CenaJednostkowa" Type="money" Nullable="false" />
+    <Property Name="Jednostka" Type="char" MaxLength="5" />
+    <Property Name="OpisProduktu" Type="text" />
+    <Property Name="RokProdukcji" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Rejestr Faktur">
+    <Key>
+      <PropertyRef Name="NrFaktury" />
+    </Key>
+    <Property Name="NrFaktury" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NrKlienta" Type="numeric" Nullable="false" />
+    <Property Name="TerminPlatnosci" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RejestrZamowien">
+    <Key>
+      <PropertyRef Name="NrZamowienia" />
+    </Key>
+    <Property Name="NrZamowienia" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NrPracownika" Type="numeric" />
+    <Property Name="NrKlienta" Type="numeric" Nullable="false" />
+    <Property Name="RodzajTranzakcji" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="WartoscZamowienia" Type="money" Nullable="false" />
+    <Property Name="Data" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sprzedawca">
+    <Key>
+      <PropertyRef Name="NrPracownika" />
+    </Key>
+    <Property Name="NrPracownika" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Imie" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nazwisko" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stanowisko" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NIP" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Login" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Rola w systemie" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Status Zamowienia">
+    <Key>
+      <PropertyRef Name="NrStatusu" />
+    </Key>
+    <Property Name="NrStatusu" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NrZamowienia" Type="numeric" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+</Schema>
