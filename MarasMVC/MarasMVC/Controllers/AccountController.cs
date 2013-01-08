@@ -537,9 +537,6 @@ namespace MarasMVC.Controllers
 
         public bool ValidateUser(string userName, string password)
         {
-            Debug.WriteLine("!!!!!!!!!!!Nazwa użytkownika: " + userName);
-            Debug.WriteLine("!!!!!!!!!!!Hasło: " + password);
-
             return _provider.ValidateUser(userName, password);
         }
 
